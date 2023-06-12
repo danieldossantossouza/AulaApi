@@ -16,5 +16,17 @@ namespace CursoFilmesApi.Controllers
             filmes.Add(filme);
         }
 
+        [HttpGet]
+        public IEnumerable<Filme> ListaDeFilmes()
+        {
+            return filmes;
+        }
+
+        [HttpGet("{id}")]
+        public Filme? RecuperafilmePorId(int id)
+        {
+            return filmes.FirstOrDefault(f=>f.Id == id);
+        }
+
     }
 }
