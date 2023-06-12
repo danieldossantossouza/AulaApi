@@ -9,10 +9,12 @@ namespace CursoFilmesApi.Controllers
     public class FilmeController : ControllerBase
     {
         private static List<Filme> filmes = new List<Filme>();
+        private static int Id = 0;
 
         [HttpPost]
         public void AdicionaFilme([FromBody] Filme filme)
         {
+            filme.Id = Id++;
             filmes.Add(filme);
         }
 
