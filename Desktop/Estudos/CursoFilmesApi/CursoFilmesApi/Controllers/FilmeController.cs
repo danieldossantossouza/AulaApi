@@ -12,22 +12,29 @@ namespace CursoFilmesApi.Controllers
         private static int Id = 0;
 
         [HttpPost]
-        public void AdicionaFilme([FromBody] Filme filme)
+        public IActionResult AdicionaFilme([FromBody] Filme filme)
         {
             filme.Id = Id++;
             filmes.Add(filme);
+            return CreatedAtAction(nameof(RecuperafilmePorId),new { id = filme.Id}, filme); // Assim que adicionado retorna o objeto criado 
         }
 
         [HttpGet]
-        public IEnumerable<Filme> ListaDeFilmes()
+        public IEnumerable<Filme> ListaDeFilmes([FromQuery]int skip =0, [FromQuery] int take=50)
         {
-            return filmes;
+            //Com o Skip(pula a quantidade de elemento) eo Take(recupera a quantidade de elemento) pegamos a quantidade de pagina que queremos
+            return filmes.Skip(skip).Take(take);
         }
 
         [HttpGet("{id}")]
-        public Filme? RecuperafilmePorId(int id)
+        public IActionResult RecuperafilmePorId(int id)
         {
-            return filmes.FirstOrDefault(f=>f.Id == id);
+            var filme = filmes.FirstOrDefault(f => f.Id == id);
+            if (filme == null) 
+            {
+                return NotFound();
+            }
+            return Ok();
         }
 
     }
