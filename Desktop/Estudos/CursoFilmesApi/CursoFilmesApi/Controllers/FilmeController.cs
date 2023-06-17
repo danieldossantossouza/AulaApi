@@ -2,6 +2,7 @@
 using CursoFilmesApi.Data;
 using CursoFilmesApi.Data.Dtos;
 using CursoFilmesApi.Models;
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CursoFilmesApi.Controllers
@@ -47,7 +48,7 @@ namespace CursoFilmesApi.Controllers
             return Ok();
         }
 
-        [HttpPut]
+        [HttpPut("{id}")]
         public IActionResult AtualizaFilme(int id, [FromBody] UpdateFilmeDto filmeDto)
         {
             var filme = _context.Filmes.FirstOrDefault(f => f.Id == id);
@@ -58,5 +59,30 @@ namespace CursoFilmesApi.Controllers
             return NoContent();
         }
 
+        // Atualização parcial com o HttpPatch
+        [HttpPatch("{id}")]
+        public IActionResult AtualizaFilmeParcial(int id,
+            JsonPatchDocument<UpdateFilmeDto> patch)
+        {
+            var filme = _context.Filmes.FirstOrDefault(f => f.Id == id);
+            if (filme == null) return NotFound();
+            var filmeParaAtualizar = _mapper.Map<UpdateFilmeDto>(filme);
+            patch.ApplyTo(filmeParaAtualizar, ModelState);
+
+            if (!TryValidateModel(filmeParaAtualizar)) 
+            {
+                return ValidationProblem(ModelState);
+            }
+            _mapper.Map(filmeParaAtualizar, filme);
+            _context.SaveChanges();
+            return NoContent();
+
+            // Para poder fazer a mudança de um determinado campo exemplo abaixo em Json
+            // { 
+            //   "op":"replace",
+            //   "path": "/titulo",
+            //   "value": "aqui vc coloca a mudança"
+            // }
+        }
     }
 }

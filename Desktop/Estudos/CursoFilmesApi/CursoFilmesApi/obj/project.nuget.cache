@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ysHF57Z7LortUTlgLiPIibfSLMWWMADVFfd8aSribogFj5/yuS9x46DWi8/c+TP0mkyTX2YxYsuqAt9t18k0vg==",
+  "dgSpecHash": "SpQh4SDIRloCx2zlAUNf/irELkwSY8CbjKHo4AOddeG00O1pLC1iHAGxlLwV2ahtS8BHHKid9eo78jG1vw7T8w==",
   "success": true,
   "projectFilePath": "C:\\Users\\daniel.souza\\Desktop\\Estudos\\CursoFilmesApi\\CursoFilmesApi\\CursoFilmesApi.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,8 @@
     "C:\\Users\\daniel.souza\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\daniel.souza\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
     "C:\\Users\\daniel.souza\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\daniel.souza\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\6.0.18\\microsoft.aspnetcore.jsonpatch.6.0.18.nupkg.sha512",
+    "C:\\Users\\daniel.souza\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\6.0.18\\microsoft.aspnetcore.mvc.newtonsoftjson.6.0.18.nupkg.sha512",
     "C:\\Users\\daniel.souza\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\daniel.souza\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\daniel.souza\\.nuget\\packages\\microsoft.data.sqlclient\\5.0.2\\microsoft.data.sqlclient.5.0.2.nupkg.sha512",
@@ -47,6 +49,8 @@
     "C:\\Users\\daniel.souza\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
     "C:\\Users\\daniel.souza\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
     "C:\\Users\\daniel.souza\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
+    "C:\\Users\\daniel.souza\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\daniel.souza\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512",
     "C:\\Users\\daniel.souza\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
     "C:\\Users\\daniel.souza\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
     "C:\\Users\\daniel.souza\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
