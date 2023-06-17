@@ -21,7 +21,16 @@ namespace CursoFilmesApi.Controllers
             _mapper = mapper;   
         }
 
+        // Conseguimos colocar as informações de como o método vai se comportar 
+        ///<summary>
+        ///    Adiciona Um Filme ao banco de dados
+        ///</summary>
+        ///<param name="filmeDto">Objeto com os campos necessário para criação de um filme</param>
+        ///<returns>IActionResult</returns>
+        ///<response code="201">Caso inserção seja feita com sucesso</response>
+
         [HttpPost]
+        [ProducesResponseType(StatusCodes.Status201Created)]
         public IActionResult AdicionaFilme([FromBody] CreateFilmeDto filmeDto)
         {
             Filme filme =_mapper.Map<Filme>(filmeDto);  

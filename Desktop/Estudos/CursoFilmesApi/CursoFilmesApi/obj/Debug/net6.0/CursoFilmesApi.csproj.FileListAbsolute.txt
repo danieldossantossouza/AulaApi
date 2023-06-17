@@ -93,3 +93,11 @@ C:\Users\daniel.souza\Desktop\Estudos\CursoFilmesApi\CursoFilmesApi\obj\Debug\ne
 C:\Users\daniel.souza\Desktop\Estudos\CursoFilmesApi\CursoFilmesApi\obj\Debug\net6.0\CursoFilmesApi.pdb
 C:\Users\daniel.souza\Desktop\Estudos\CursoFilmesApi\CursoFilmesApi\obj\Debug\net6.0\CursoFilmesApi.genruntimeconfig.cache
 C:\Users\daniel.souza\Desktop\Estudos\CursoFilmesApi\CursoFilmesApi\obj\Debug\net6.0\ref\CursoFilmesApi.dll
+C:\Users\daniel.souza\Desktop\Estudos\CursoFilmesApi\CursoFilmesApi\bin\Debug\net6.0\CursoFilmesApi.xml
+C:\Users\daniel.souza\Desktop\Estudos\CursoFilmesApi\CursoFilmesApi\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\daniel.souza\Desktop\Estudos\CursoFilmesApi\CursoFilmesApi\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\daniel.souza\Desktop\Estudos\CursoFilmesApi\CursoFilmesApi\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\daniel.souza\Desktop\Estudos\CursoFilmesApi\CursoFilmesApi\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\daniel.souza\Desktop\Estudos\CursoFilmesApi\CursoFilmesApi\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\daniel.souza\Desktop\Estudos\CursoFilmesApi\CursoFilmesApi\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
+C:\Users\daniel.souza\Desktop\Estudos\CursoFilmesApi\CursoFilmesApi\obj\Debug\net6.0\CursoFilmesApi.xml
