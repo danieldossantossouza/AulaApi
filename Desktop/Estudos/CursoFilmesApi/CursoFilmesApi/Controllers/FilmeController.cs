@@ -31,10 +31,11 @@ namespace CursoFilmesApi.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<Filme> ListaDeFilmes([FromQuery]int skip =0, [FromQuery] int take=50)
+        public IEnumerable<ReadFilmeDto> ListaDeFilmes([FromQuery]int skip =0, [FromQuery] int take=50)
         {
             //Com o Skip(pula a quantidade de elemento) eo Take(recupera a quantidade de elemento) pegamos a quantidade de pagina que queremos
-            return _context.Filmes.Skip(skip).Take(take);
+            return _mapper.Map<List<ReadFilmeDto>>(_context.Filmes.Skip(skip).Take(take));
+    
         }
 
         [HttpGet("{id}")]
@@ -45,6 +46,7 @@ namespace CursoFilmesApi.Controllers
             {
                 return NotFound();
             }
+            var filmeDto = _mapper.Map<ReadFilmeDto>(filme);
             return Ok();
         }
 
@@ -83,6 +85,17 @@ namespace CursoFilmesApi.Controllers
             //   "path": "/titulo",
             //   "value": "aqui vc coloca a mudança"
             // }
+        }
+
+
+        [HttpDelete("{id}")]
+        public IActionResult DeletaFilme(int id)
+        {
+            var filme = _context.Filmes.FirstOrDefault(f => f.Id == id);
+            if (filme == null) return NotFound();
+           _context.Remove(filme);
+            _context.SaveChanges();
+            return NoContent();
         }
     }
 }
