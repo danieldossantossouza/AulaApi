@@ -2,7 +2,7 @@
 
 namespace CursoFilmesApi.Data.Dtos
 {
-    public class CreateFilmeDto
+    public class UpdateFilmeDto
     {
     
         [Required(ErrorMessage = "O título do filme é obrigatorio !")]
